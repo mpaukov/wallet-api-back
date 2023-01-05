@@ -9,7 +9,6 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./index.js",
     "start:dev": "cross-env NODE_ENV=development nodemon ./server.js",
-    "vercel-build": "cross-env NODE_ENV=production node ./index.js",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js"
   },
