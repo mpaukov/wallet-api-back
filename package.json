@@ -2,11 +2,13 @@
   "name": "wallet-api",
   "version": "2.0.0",
   "private": true,
-
+  "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./index.js",
     "start:dev": "cross-env NODE_ENV=development nodemon ./server.js",
-    "vercel-build": "",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js"
   },
