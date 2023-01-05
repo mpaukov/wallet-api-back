@@ -5,7 +5,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./index.js",
     "start:dev": "cross-env NODE_ENV=development nodemon ./server.js",
-    "build":"vercel build --prod --yes",
+    "build": "@vercel/node build --prod --yes",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js"
   },
@@ -23,7 +23,8 @@
     "mongoose": "^6.1.7",
     "morgan": "1.10.0",
     "multer": "^1.4.4",
-    "swagger-ui-express": "^4.3.0"
+    "swagger-ui-express": "^4.3.0",
+    "vercel": "^28.10.2"
   },
   "devDependencies": {
     "eslint": "7.19.0",
