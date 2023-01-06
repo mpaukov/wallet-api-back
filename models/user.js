@@ -1,4 +1,3 @@
-const path = require('path');
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -100,7 +99,8 @@ userSchema.methods.incrementTotalTransactions = function () {
 };
 
 userSchema.methods.setDefaultAvatar = function () {
-  this.avatarURL = path.join('avatars', 'defaultUserAvatar.jpg');
+  this.avatarURL =
+    'https://github.com/mpaukov/wallet-api-back/blob/main/public/avatars/defaultUserAvatar.jpg?raw=true';
   return this;
 };
 
