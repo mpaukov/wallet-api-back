@@ -101,7 +101,6 @@ userSchema.methods.incrementTotalTransactions = function () {
 userSchema.methods.setDefaultAvatar = function () {
   this.avatarURL =
     'https://github.com/mpaukov/wallet-api-back/blob/main/public/avatars/defaultUserAvatar.jpg?raw=true';
-  console.log('this', this);
   return this;
 };
 
