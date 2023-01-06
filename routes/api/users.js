@@ -1,5 +1,5 @@
 const express = require('express');
-const { auth, checkDemoUser, validation, ctrlWrapper, upload } = require('../../middlewares');
+const { auth, checkDemoUser, validation, ctrlWrapper } = require('../../middlewares');
 const { subscriptionJoiSchema, nameJoiSchema, emailJoiSchema } = require('../../models/user');
 const { users: ctrl } = require('../../controllers');
 
@@ -25,12 +25,6 @@ router.patch(
   '/subscription',
   [auth, validation(subscriptionJoiSchema)],
   ctrlWrapper(ctrl.updateSubscription),
-);
-
-router.patch(
-  '/avatars',
-  [auth, checkDemoUser, upload.single('avatar')],
-  ctrlWrapper(ctrl.updateAvatar),
 );
 
 router.delete('/delete', [auth, checkDemoUser], ctrlWrapper(ctrl.deleteUser));
